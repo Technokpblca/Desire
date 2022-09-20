@@ -38,3 +38,190 @@
 .logo{
   margin: 0 auto;
 }
+
+.footer{
+  &__content{
+    background-color: #DFDFDF;
+    padding: 61px 0 80px;
+  }
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info{
+    width: 540px;
+  }
+  &__info-title{
+    color: $title;
+    @extend %montserrat-700;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 14px;
+  }
+  &__info-text{
+    margin-bottom: 16px;
+    max-width: 475px;
+  }
+  &__info-email{
+    color: $title;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 22px;
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/mail.svg);
+      background-repeat: no-repeat;
+      width: 16px;
+      height: 16px;
+      top: 8px;
+      left: 0;
+    }
+  }
+  &__form{
+    display: flex;
+  }
+  &__form-input{
+    background-color: transparent;
+    border: 1px solid rgba(56, 54, 54, .7);
+    border-radius: 21px;
+    padding: 6px 10px 6px 18px;
+    outline: none;
+    width: 100%;
+    &::placeholder{
+      @extend %opensans-400;
+      font-size: 16px;
+      line-height: 27px;
+      font-weight: 400;
+      color: #A1A1A1;
+    }
+  }
+  &__form-button{
+    color: #FFFFF0;
+    font-weight: 600;
+    padding: 6px 12px;
+    background: $title;
+    border-radius: 21px;
+    cursor: pointer;
+    border: none;
+    min-width: 160px;
+    margin-left: 9px;
+  }
+  &__social{
+    width: 125px;
+    margin-right: auto;
+    margin-left: 100px;
+  }
+  &__social-link{
+    padding-left: 28px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+  }
+  &__social-link--facebook::before{
+    background-image: url(../images/icons/facebook.svg);
+    top: 7px;
+  }
+  &__social-link--instagram::before{
+    background-image: url(../images/icons/instagram.svg);
+    top: 8px;
+  }
+  &__social-link--pinterest::before{
+    background-image: url(../images/icons/Pinterest.svg);
+    top: 6px;
+  }
+  &__social-link--whatsapp::before{
+    background-image: url(../images/icons/whatsapp.svg);
+    top: 7px;
+  }
+  &__social-link--youtube::before{
+    background-image: url(../images/icons/youtube.svg);
+    top: 9px;
+    width: 18px;
+  }
+  &__social-link,
+  &__menu-link{
+    font-weight: 600;
+    font-size: 14px;
+    color: #707070;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  &__menu{
+    margin-right: 60px;
+    width: 125px;
+  }
+  &__copyright{
+    background-color: $title;
+    padding: 42px 0 41px;
+    color: #A1A1A1;
+    text-align: center;
+  }
+}
+
+.rightside-menu{
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 694px;
+  background-color: #fff;
+  padding-top: 40px;
+  box-shadow: -2px 3px 17px 0px #000;
+  transition: all .5s;
+  &.rightside-menu--close{
+    transform: translateX(500%);
+  }
+  &__close{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 50px;
+    margin-bottom: 60px;
+  }
+  &__content{
+    text-align: center;
+    max-width: 485px;
+    margin: 0 auto;
+  }
+  &__logo{
+    margin-bottom: 40px;
+    display: inline-block;
+  }
+  &__title{
+    @extend %montserrat-700;
+    font-size: 36px;
+    line-height: 51px;
+    color: $title;
+    position: relative;
+    margin-bottom: 17px;
+    padding-bottom: 15px;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      max-width: 252px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid #979797;
+    }
+  }
+  &__text{
+    margin-bottom: 75px;
+  }
+  &__img{
+    max-width: 485px;
+  }
+}
