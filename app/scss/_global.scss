@@ -61,3 +61,23 @@ body {
     }
   }
 }
+
+.info-email {
+  color: $title;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 22px;
+  padding-left: 30px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(../images/icons/mail.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: 0;
+  }
+}
