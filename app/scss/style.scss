@@ -18,6 +18,9 @@
     padding: 0;
     cursor: pointer;
   }
+  &__btn-menu{
+    display: none;
+  }
 }
 
 .menu{
@@ -228,14 +231,18 @@
   background: rgba(#DFDFDF, .5);
   padding: 13px 14px;
   position: relative;
-  z-index: 998;
+  z-index: 990;
   &__list{
     display: flex;
+    overflow-x: auto;
+  }
+  &__item{
+    position: relative;
+    padding-right: 8px;
   }
   &__item::after{
     content: '/';
-    margin-left: -4px;
-    margin-right: 4px;
+    position: absolute;
   }
   &__item:last-child::after{
     content: '';
@@ -388,7 +395,6 @@
   background-image: url(../images/decor-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 600px;
   padding: 172px 0 156px;
   &__title{
     max-width: 740px;
@@ -719,6 +725,9 @@
 .map{
   margin-top: -53px;
   margin-bottom: 50px;
+  iframe{
+    height: 578px;
+  }
 }
 
 .contacts{
@@ -821,7 +830,7 @@
     top: 0;
     bottom: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgba(#fff, .6);
     color: $title;
@@ -1224,3 +1233,5 @@
     color: #A1A1A1;
   }
 }
+
+@import 'media';
